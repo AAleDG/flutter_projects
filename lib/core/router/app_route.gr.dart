@@ -15,13 +15,33 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    TodoAddFieldRoute.name: (routeData) {
+      return AutoRoutePage<void>(
+        routeData: routeData,
+        child: const TodoAddFieldPage(),
+      );
+    },
     TodoAppRoute.name: (routeData) {
       return AutoRoutePage<void>(
         routeData: routeData,
         child: const TodoAppPage(),
       );
-    }
+    },
   };
+}
+
+/// generated route for
+/// [TodoAddFieldPage]
+class TodoAddFieldRoute extends PageRouteInfo<void> {
+  const TodoAddFieldRoute({List<PageRouteInfo>? children})
+      : super(
+          TodoAddFieldRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'TodoAddFieldRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

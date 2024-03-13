@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/core/router/app_route.dart';
 
 @RoutePage<void>()
 class TodoAppPage extends StatelessWidget {
@@ -9,7 +10,11 @@ class TodoAppPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          context.router.push(
+            const TodoAddFieldRoute(),
+          );
+        },
         child: const Icon(
           Icons.add,
         ),

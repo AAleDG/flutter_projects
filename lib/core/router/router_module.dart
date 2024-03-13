@@ -9,7 +9,12 @@ class RouterModule {
     initial: true,
   );
 
+  static final todoAddFieldPage = AutoRoute(
+    page: TodoAddFieldRoute.page,
+  );
+
   static final routerModuleList = [
     todoAppPage,
+    todoAddFieldPage,
   ];
 }
